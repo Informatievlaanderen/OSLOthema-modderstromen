@@ -3,7 +3,7 @@
     "name": "modderstromen-ap",
     "type": "ap",
     "eap": "MijnApplicatieprofiel-AP.eap",
-    "diagram": "MijnApplicatieprofiel",
+    "diagram": "Bodemerosie",
     "template": "mijn-applicatieprofiel-ap.j2",
     "title": "OSLO Modderstromen",
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
