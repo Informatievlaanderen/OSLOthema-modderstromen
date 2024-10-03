@@ -1,17 +1,17 @@
 [
   {
-    "name": "bodemerosie",
+    "name": "modderstromen-ap",
     "type": "ap",
     "eap": "MijnApplicatieprofiel-AP.eap",
     "diagram": "Bodemerosie",
-    "template": "bodemerosie-ap.j2",
-    "title": "OSLO Bodemerosie",
+    "template": "mijn-applicatieprofiel-ap.j2",
+    "title": "OSLO Modderstromen",
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
     "publication-date": "2024-07-22",
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
     "contributors-file": "stakeholders.csv",
     "contributors-column": "MijnKolom",
-    "site": "site-skeleton/bodemerosie-ap",
+    "site": "site-skeleton/mijn-applicatieprofiel-ap",
     "feedbackurl": "https://github.com/Informatievlaanderen/OSLOthema-modderstromen/issues",
     "standaardregisterurl": "https://data.vlaanderen.be/standaarden/applicatieprofiel-modderstromen/index.html"
   }
