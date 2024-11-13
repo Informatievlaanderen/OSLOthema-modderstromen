@@ -1,0 +1,75 @@
+@prefix : <http://example.com/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix be: <https://test.data.vlaanderen.be/ns/bodemerosie/#> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+:StadMechelen a prov:Agent;
+  dc:title "Stad Mechelen".
+
+:Erosiepoel2 a be:Erosiepoel;
+  be:Erosiebestrijdingsmaatregel.verantwoordelijke :StadMechelen;
+  cidoc:P52_has_current_owner :StadMechelen;
+  prov:atLocation :Akker1;
+  be:Erosiepoel.maxVolume [
+    a qudt:QuantityValue;
+    qudt:numericValue 5000;
+    qudt:unit [] # liter
+  ];
+  dce:format [
+    a generiek:Dimensie
+   # TODO: add actual dimensions
+  ] .
+
+:Akker1 a prov:Location.
+
+:Onderhoud2 a be:Onderhoud;
+  sosa:hasSimpleResult true;
+  dc:type :SensorReinigen;
+  prov:startedAtTime "2024-10-18 10:00";
+  prov:endedAtTime "2024-10-18 11:00";
+  sosa:madeByActuator :StadMechelen;
+  sosa:hasFeatureOfInterest :Erosiepoel2.
+
+:Onderhoud3 a be:Onderhoud;
+  sosa:hasSimpleResult true;
+  dc:type :Uitgraven;
+  prov:startedAtTime "2024-10-18 10:00";
+  prov:endedAtTime "2024-10-18 11:00";
+  sosa:madeByActuator :StadMechelen;
+  sosa:hasFeatureOfInterest :Erosiepoel2.
+
+:Observation1 a sosa:Observation;
+  sosa:observedProperty :Sediment;
+  sosa:hasResult :QuantityValue1;
+  sosa:hasFeatureOfInterest :Erosiepoel2;
+  prov:startedAtTime "2024-10-08 10:00";
+  prov:endedAtTime "2024-10-08 10:00".
+
+:QuantityValue1 a qudt:QuantityValue;
+  qudt:numericValue 4000;
+  qudt:unit [
+    # Liter
+  ] .
+
+:Observation3 a sosa:Observation;
+  sosa:observedProperty :Sediment;
+  sosa:hasResult :QuantityValue2;
+  sosa:hasFeatureOfInterest :Erosiepoel2;
+  prov:startedAtTime "2024-10-08 11:00";
+  prov:endedAtTime "2024-10-08 11:00".
+
+:QuantityValue2 a qudt:QuantityValue;
+  qudt:numericValue 1000;
+  qudt:unit [
+    # Liter
+  ] .
+
+:SensorReinigen a skos:Concept.
+:Uitgraven a skos:Concept.
