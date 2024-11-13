@@ -20,11 +20,11 @@
     a qudt:QuantityValue;
     qudt:numericValue 5000;
     qudt:unit [] # liter
- ];
- dce:format [
-   a generiek:Dimensie
-   # TODO: add actual dimensions
- ] .
+  ];
+  dce:format [
+    a generiek:Dimensie
+    # TODO: add actual dimensions
+  ] .
 
 :Akker1 a prov:Location.
 
