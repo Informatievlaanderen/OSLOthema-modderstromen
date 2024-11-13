@@ -32,7 +32,7 @@
   prov:endedAtTime "2024-10-08 10:00".
 
 :QuantityValue1 a qudt:QuantityValue;
-  qudt:numericValue 1000;
+  qudt:numericValue 4000;
   qudt:unit [
     # Liter
   ] .
