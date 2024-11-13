@@ -1,0 +1,44 @@
+@prefix : <http://example.com/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix be: <https://test.data.vlaanderen.be/ns/bodemerosie/#> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
+
+:StadMechelen a prov:Agent;
+  dc:title "Stad Mechelen".
+
+:Erosiepoel2 a be:Erosiepoel;
+  prov:atLocation :Akker1;
+  be:Erosiebestrijdingsmaatregel.verantwoordelijke :StadMechelen;
+  cidoc:P52_has_current_owner :StadMechelen;
+  be:Erosiepoel.maxVolume [
+    a qudt:QuantityValue;
+    qudt:numericValue 5000;
+    qudt:unit [] # liter
+ ];
+ dce:format [
+   a generiek:Dimensie
+   # TODO: add actual dimensions
+ ] .
+
+:Akker1 a prov:Location.
+
+:Sediment a ssn:Property.
+
+:Observation1 a sosa:Observation;
+  sosa:observedProperty :Sediment;
+  sosa:hasResult :QuantityValue1;
+  sosa:hasFeatureOfInterest :Erosiepoel2;
+  prov:startedAtTime "2024-10-08 10:00";
+  prov:endedAtTime "2024-10-08 10:00".
+
+:QuantityValue1 a qudt:QuantityValue;
+  qudt:numericValue 1000;
+  qudt:unit [
+    # Liter
+  ] .

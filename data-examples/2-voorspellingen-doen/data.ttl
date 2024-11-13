@@ -1,0 +1,87 @@
+@prefix : <http://example.com/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix be: <https://test.data.vlaanderen.be/ns/bodemerosie/#> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
+
+:Erosiepoel2 a be:Erosiepoel;
+  be:Erosiebestrijdingsmaatregel.aanvoerzone :Zone2;
+  be:Erosiepoel.maxVolume [
+    a qudt:QuantityValue;
+    qudt:numericValue 5000;
+    qudt:unit [] # liter
+ ];
+ dce:format [
+   a generiek:Dimensie
+   # TODO: add actual dimensions
+ ] .
+
+:Sediment a ssn:Property.
+:Neerslag a ssn:Property.
+
+:Observation1 a sosa:Observation;
+  sosa:observedProperty :Sediment;
+  sosa:hasResult :QuantityValue1;
+  sosa:hasFeatureOfInterest :Erosiepoel2;
+  prov:startedAtTime "2024-10-08 10:00";
+  prov:endedAtTime "2024-10-08 10:00".
+
+:QuantityValue1 a qudt:QuantityValue;
+  qudt:numericValue 1000;
+  qudt:unit [
+    # Liter
+  ] .
+
+:Observation2 a sosa:Observation;
+  sosa:observedProperty :Sediment;
+  sosa:hasResult :QuantityValue2;
+  sosa:hasFeatureOfInterest :Erosiepoel2;
+  prov:startedAtTime "2024-09-25 10:00";
+  prov:endedAtTime "2024-09-25 10:00".
+
+:QuantityValue2 a qudt:QuantityValue;
+  qudt:numericValue 3000;
+  qudt:unit [
+    # Liter
+  ] .
+
+:Aline a prov:Agent;
+  dc:title "Aline".
+
+:Akker2 a prov:Location.
+
+:Zone2 a be:Zone;
+  prov:atLocation :Akker2;
+  cidoc:P52_has_current_owner :Aline;
+  be:Zone.verantwoordelijke :Aline.
+
+:PrecipitationObservation1 a sosa:Observation;
+  sosa:observedProperty :Neerslag;
+  sosa:hasResult :QuantityValue3;
+  sosa:hasFeatureOfInterest :Zone2;
+  prov:startedAtTime "2024-09-25 10:00";
+  prov:endedAtTime "2024-09-25 10:00".
+
+:QuantityValue3 a qudt:QuantityValue;
+  qudt:numericValue 5;
+  qudt:unit [
+    # Liter
+  ] .
+
+:PrecipitationObservation2 a sosa:Observation;
+  sosa:observedProperty :Neerslag;
+  sosa:hasResult :QuantityValue4;
+  sosa:hasFeatureOfInterest :Zone2;
+  prov:startedAtTime "2024-10-08 10:00";
+  prov:endedAtTime "2024-10-08 10:00".
+
+:QuantityValue4 a qudt:QuantityValue;
+  qudt:numericValue 10;
+  qudt:unit [
+    # Liter
+  ] .
