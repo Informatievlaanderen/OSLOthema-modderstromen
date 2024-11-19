@@ -29,7 +29,7 @@
 
 :Akker1 a prov:Location.
 
-:Onderhoud2 a be:Onderhoud;
+:Onderhoud2 a generiek:Onderhoud;
   sosa:hasSimpleResult true;
   dc:type :SensorReinigen;
   prov:startedAtTime "2024-10-18 10:00";
@@ -37,7 +37,7 @@
   sosa:madeByActuator :StadMechelen;
   sosa:hasFeatureOfInterest :Erosiepoel2.
 
-:Onderhoud3 a be:Onderhoud;
+:Onderhoud3 a generiek:Onderhoud;
   sosa:hasSimpleResult true;
   dc:type :Uitgraven;
   prov:startedAtTime "2024-10-18 10:00";

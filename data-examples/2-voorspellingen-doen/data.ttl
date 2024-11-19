@@ -21,8 +21,8 @@
    # TODO: add actual dimensions
  ] .
 
-:Sediment a ssn:Property.
-:Neerslag a ssn:Property.
+:Sediment a sosa:ObservedProperty.
+:Neerslag a sosa:ObservedProperty.
 
 :Observation1 a sosa:Observation;
   sosa:observedProperty :Sediment;
