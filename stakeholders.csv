@@ -1,4 +1,26 @@
 Voornaam;Naam;Affiliatie;E-mail;Website;MijnKolom;
-AuteurVoornaam;AuteurNaam;AuteurAffiliatie;auteurvoornaam.auteurnaam@auteurdomein;https://auteurwebsiteurl;A;
-EditorVoornaam;EditorNaam;EditorAffiliatie;editorvoornaam.editornaam@editordomein;https://editorwebsiteurl;E;
-MedewerkerVoornaam;MedewerkerNaam;MedewerkerAffiliatie;medewerkervoornaam.medewerkernaam@medewerkerdomein;https://medewerkerwebsiteurl;C;
+Kenny;Stevens;VERA;kenny.stevens@vera.be;https://www.vera.be/;A
+Jan;Potemans;VERA;jan.potemans@vera.be;https://www.vera.be/;A
+Karen;Peeters;Provincie Vlaams-Brabant ;karen.peeters@vlaamsbrabant.be;https://www.vlaamsbrabant.be/nl;A
+Pieter;Heyvaert;Digitaal Vlaanderen;pieter.heyvaert@vlaanderen.be;https://data.vlaanderen.be/id/organisatie/OVO002949;E
+Yaron;Dassonneville;Digitaal Vlaanderen;yaron.dassonneville@vlaanderen.be;https://data.vlaanderen.be/id/organisatie/OVO002950;E
+Aline;Verbrugge;Digitaal Vlaanderen;aline.verbrugge@vlaanderen.be;https://data.vlaanderen.be/id/organisatie/OVO002951;E
+Geert;Thijs;Digitaal Vlaanderen;geert.thijs@vlaanderen.be;https://data.vlaanderen.be/id/organisatie/OVO002952;E
+Ziggy;Vanlishout;Digitaal Vlaanderen;ziggy.vanlishout@vlaanderen.be;https://data.vlaanderen.be/id/organisatie/OVO002953;E
+Laurens;Vercauteren;Digitaal Vlaanderen;laurens.vercauteren@vlaanderen.be;https://data.vlaanderen.be/id/organisatie/OVO002954;E
+Eveline;Vlassenroot;Digitaal Vlaanderen;eveline.vlassenroot@vlaanderen.be;https://data.vlaanderen.be/id/organisatie/OVO002955;E
+Geert;Van Haute;Departement Omgeving;;https://omgeving.vlaanderen.be/nl;C
+Dries;Luts;Departement Omgeving;;https://omgeving.vlaanderen.be/nl;C
+Jan;Vermang;Departement Omgeving;;https://omgeving.vlaanderen.be/nl;C
+Seth;Callewaert;Departement Omgeving;;https://omgeving.vlaanderen.be/nl;C
+Benjamin;Vermeulen;Stad Mechelen;;https://www.mechelen.be/;C
+Sacha;Gobeyn;FLUVES;;https://www.fluves.com/;C
+Youri;Amerlinck;Aquafin;;https://www.aquafin.be/;C
+Fien;Vandekerckhove;Boerenbond;;https://www.boerenbond.be/;C
+Johan;Krist;Provincie Vlaams-Brabant ;;https://www.vlaamsbrabant.be/nl;C
+Raf;Bouteligier;Provincie Vlaams-Brabant ;;https://www.vlaamsbrabant.be/nl;C
+Margriet;Baert;Agentschap Landbouw en Zeevisserij;;https://lv.vlaanderen.be/;C
+Tinne;Cahy;Sumaqua;;https://www.sumaqua.be/;C
+Nele;Van Ransbeeck;Vlaamse Milieumaatschappij;;https://www.vmm.be/;C
+Karel;Vandaele;Provincie Limburg;;https://limburg.be/;C
+Bruno;Depond;Gemeente Zaventem;;https://www.zaventem.be/;C
