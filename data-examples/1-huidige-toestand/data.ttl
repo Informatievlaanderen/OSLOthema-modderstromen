@@ -8,6 +8,8 @@
 @prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 
 :StadMechelen a prov:Agent;
   dc:title "Stad Mechelen".
@@ -21,10 +23,34 @@
     qudt:numericValue 5000;
     qudt:unit [] # liter
   ];
-  dce:format [
-    a generiek:Dimensie
-    # TODO: add actual dimensions
-  ] .
+ # Dimensies
+  qudt:hasQuantity [
+    a qudt:Quantity;
+    qudt:hasQuantityKind quantitykind:Length;
+    qudt:quantityValue [
+      a qudt:QuantityValue;
+      qudt:unit unit:M;
+      qudt:numericValue 2
+    ]
+  ],
+  [
+    a qudt:Quantity;
+    qudt:hasQuantityKind quantitykind:Width;
+    qudt:quantityValue [
+      a qudt:QuantityValue;
+      qudt:unit unit:M;
+      qudt:numericValue 3
+    ]
+  ],
+  [
+    a qudt:Quantity;
+    qudt:hasQuantityKind quantitykind:Thickness;
+    qudt:quantityValue [
+      a qudt:QuantityValue;
+      qudt:unit unit:M;
+      qudt:numericValue 5
+    ]
+  ].
 
 :Akker1 a prov:Location.
 

@@ -9,6 +9,8 @@
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 
 :Ingangonderdeel a be:Erosiebestrijdingsmaatregelonderdeel;
   dc:type :Ingang.
@@ -37,9 +39,33 @@
     qudt:numericValue 5000;
     qudt:unit [] # liter
   ];
-  dce:format [
-    a generiek:Dimensie
-    # TODO: add actual dimensions
-  ] .
+ # Dimensies
+  qudt:hasQuantity [
+    a qudt:Quantity;
+    qudt:hasQuantityKind quantitykind:Length;
+    qudt:quantityValue [
+      a qudt:QuantityValue;
+      qudt:unit unit:M;
+      qudt:numericValue 2
+    ]
+  ],
+  [
+    a qudt:Quantity;
+    qudt:hasQuantityKind quantitykind:Width;
+    qudt:quantityValue [
+      a qudt:QuantityValue;
+      qudt:unit unit:M;
+      qudt:numericValue 3
+    ]
+  ],
+  [
+    a qudt:Quantity;
+    qudt:hasQuantityKind quantitykind:Thickness;
+    qudt:quantityValue [
+      a qudt:QuantityValue;
+      qudt:unit unit:M;
+      qudt:numericValue 5
+    ]
+  ].
 
 :Ingang a skos:Concept.
