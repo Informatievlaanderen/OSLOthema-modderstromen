@@ -23,34 +23,6 @@
     a qudt:QuantityValue;
     qudt:numericValue 5000;
     qudt:unit [] # liter
-  ];
- # Dimensies
-  qudt:hasQuantity [
-    a qudt:Quantity;
-    qudt:hasQuantityKind quantitykind:Length;
-    qudt:quantityValue [
-      a qudt:QuantityValue;
-      qudt:unit unit:M;
-      qudt:numericValue 2
-    ]
-  ],
-  [
-    a qudt:Quantity;
-    qudt:hasQuantityKind quantitykind:Width;
-    qudt:quantityValue [
-      a qudt:QuantityValue;
-      qudt:unit unit:M;
-      qudt:numericValue 3
-    ]
-  ],
-  [
-    a qudt:Quantity;
-    qudt:hasQuantityKind quantitykind:Thickness;
-    qudt:quantityValue [
-      a qudt:QuantityValue;
-      qudt:unit unit:M;
-      qudt:numericValue 5
-    ]
   ].
 
 :Akker1 a prov:Location.
