@@ -22,7 +22,7 @@
   be:Erosiepoel.maxVolume [
     a qudt:QuantityValue;
     qudt:numericValue 5000;
-    qudt:unit [] # liter
+    qudt:unit unit:L
   ].
 
 :Akker1 a prov:Location.
@@ -52,9 +52,7 @@
 
 :QuantityValue1 a qudt:QuantityValue;
   qudt:numericValue 4000;
-  qudt:unit [
-    # Liter
-  ] .
+  qudt:unit unit:L .
 
 :Observation3 a sosa:Observation;
   sosa:observedProperty :Sediment;
@@ -65,9 +63,7 @@
 
 :QuantityValue2 a qudt:QuantityValue;
   qudt:numericValue 1000;
-  qudt:unit [
-    # Liter
-  ] .
+  qudt:unit unit:L .
 
 :SensorReinigen a skos:Concept.
 :Uitgraven a skos:Concept.

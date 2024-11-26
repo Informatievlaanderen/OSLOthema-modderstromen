@@ -28,16 +28,14 @@
 
 :QuantityValue1 a qudt:QuantityValue;
   qudt:numericValue 4000;
-  qudt:unit [
-    # Liter
-  ] .
+  qudt:unit unit:L .
 
 :Erosiepoel2 a be:Erosiepoel;
   dc:hasPart :Ingangonderdeel;
   be:Erosiepoel.maxVolume [
     a qudt:QuantityValue;
     qudt:numericValue 5000;
-    qudt:unit [] # liter
+    qudt:unit unit:L
   ].
 
 :Ingang a skos:Concept.

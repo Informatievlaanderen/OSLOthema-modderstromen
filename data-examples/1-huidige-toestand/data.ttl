@@ -21,7 +21,7 @@
   be:Erosiepoel.maxVolume [
     a qudt:QuantityValue;
     qudt:numericValue 5000;
-    qudt:unit [] # liter
+    qudt:unit unit:L
   ];
  # Dimensies
   qudt:hasQuantity [
