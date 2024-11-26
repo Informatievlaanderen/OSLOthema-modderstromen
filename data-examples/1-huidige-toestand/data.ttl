@@ -54,7 +54,7 @@
 
 :Akker1 a prov:Location.
 
-:Sediment a sosa:ObservedProperty.
+:Sediment a sosa:ObservableProperty.
 
 :Observation1 a sosa:Observation;
   sosa:observedProperty :Sediment;

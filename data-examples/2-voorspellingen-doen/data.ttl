@@ -19,8 +19,8 @@
     qudt:unit unit:L
   ].
 
-:Sediment a sosa:ObservedProperty.
-:Neerslag a sosa:ObservedProperty.
+:Sediment a sosa:ObservableProperty.
+:Neerslag a sosa:ObservableProperty.
 
 :Observation1 a sosa:Observation;
   sosa:observedProperty :Sediment;
@@ -42,9 +42,7 @@
 
 :QuantityValue2 a qudt:QuantityValue;
   qudt:numericValue 3000;
-  qudt:unit [
-    # Liter
-  ] .
+  qudt:unit unit:L .
 
 :Aline a prov:Agent;
   dc:title "Aline".
@@ -76,6 +74,4 @@
 
 :QuantityValue4 a qudt:QuantityValue;
   qudt:numericValue 10;
-  qudt:unit [
-    # Liter
-  ] .
+  qudt:unit unit:L .
