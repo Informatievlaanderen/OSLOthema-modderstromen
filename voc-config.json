@@ -1,5 +1,5 @@
 {
-  "title": "Vocabularium Bodemerosie",
+  "title": "Vocabularium Erosiepoel",
   "category": "Vocabularium",
   "usage": "Aanbevolen (vrijwillig)",
   "status": "standaard-in-ontwikkeling",
@@ -13,14 +13,14 @@
   "descriptionFileName": "description.md",
   "specificationDocuments": [
     {
-      "name": "Vocabularium Bodemerosie",
-      "resourceReference": "https://test.data.vlaanderen.be/ns/bodemerosie/"
+      "name": "Vocabularium Erosiepoel",
+      "resourceReference": "https://test.data.vlaanderen.be/ns/erosiepoel/"
     }
   ],
   "documentation": [
     {
-      "name": "Applicatieprofiel Bodemerosie",
-      "resourceReference": "https://test.data.vlaanderen.be/doc/applicatieprofiel/bodemerosie/ontwerpstandaard/2024-11-27/"
+      "name": "Applicatieprofiel Erosiepoel",
+      "resourceReference": "https://test.data.vlaanderen.be/doc/applicatieprofiel/erosiepoel/ontwerpstandaard/2024-11-29/"
     }
   ],
   "charter": {
