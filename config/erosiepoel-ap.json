@@ -3,7 +3,7 @@
     "name": "erosiepoel-ap",
     "type": "ap",
     "eap": "OSLO-Erosiepoel.eap",
-    "diagram": "Erosiepoel",
+    "diagram": "Erosiepoel-v2",
     "template": "erosiepoel-ap.j2",
     "title": "OSLO Erosiepoel",
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/OntwerpStandaard",
