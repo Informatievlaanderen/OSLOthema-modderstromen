@@ -4,16 +4,16 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix dc: <http://purl.org/dc/terms/> .
-@prefix be: <https://test.data.vlaanderen.be/ns/bodemerosie/#> .
+@prefix ep: <https://test.data.vlaanderen.be/ns/erosiepoel/#> .
 @prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
 @prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 
-:Erosiepoel2 a be:Erosiepoel;
-  be:Erosiebestrijdingsmaatregel.aanvoerzone :Zone2;
-  be:Erosiepoel.maxVolume [
+:Erosiepoel2 a ep:Erosiepoel;
+  ep:Erosiebestrijdingsmaatregel.aanvoerzone :Zone2;
+  ep:Erosiepoel.maxVolume [
     a qudt:QuantityValue;
     qudt:numericValue 5000;
     qudt:unit unit:L
@@ -49,10 +49,10 @@
 
 :Akker2 a prov:Location.
 
-:Zone2 a be:Zone;
+:Zone2 a ep:Zone;
   prov:atLocation :Akker2;
   cidoc:P52_has_current_owner :Aline;
-  be:Zone.verantwoordelijke :Aline.
+  ep:Zone.verantwoordelijke :Aline.
 
 :PrecipitationObservation1 a sosa:Observation;
   sosa:observedProperty :Neerslag;

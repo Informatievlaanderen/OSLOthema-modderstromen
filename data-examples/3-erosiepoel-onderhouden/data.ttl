@@ -4,7 +4,7 @@
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix dc: <http://purl.org/dc/terms/> .
-@prefix be: <https://test.data.vlaanderen.be/ns/bodemerosie/#> .
+@prefix ep: <https://test.data.vlaanderen.be/ns/erosiepoel/#> .
 @prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix dce: <http://purl.org/dc/elements/1.1/> .
 @prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
@@ -15,11 +15,11 @@
 :StadMechelen a prov:Agent;
   dc:title "Stad Mechelen".
 
-:Erosiepoel2 a be:Erosiepoel;
-  be:Erosiebestrijdingsmaatregel.verantwoordelijke :StadMechelen;
+:Erosiepoel2 a ep:Erosiepoel;
+  ep:Erosiebestrijdingsmaatregel.verantwoordelijke :StadMechelen;
   cidoc:P52_has_current_owner :StadMechelen;
   prov:atLocation :Akker1;
-  be:Erosiepoel.maxVolume [
+  ep:Erosiepoel.maxVolume [
     a qudt:QuantityValue;
     qudt:numericValue 5000;
     qudt:unit unit:L
