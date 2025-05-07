@@ -23,6 +23,22 @@ Wat volgt zijn een aantal use cases die hieronder vallen:
 </ul>
 
 <p>
+Het datamodel bestaat uit onder andere de volgende klassen.
+De klasse Erosiebestrijdingsmaatregel is de superklasse voor elk maatregel die helpt bij het bestrijden van erosie,
+inclusief een erosiepoel.
+Een Erosiebestrijdingsmaatregel kan bestaan uit verschillende onderdelen, bijvoorbeeld ingang en uitgang,
+voor welke we de klasse Erosiebestrijdingsmaatregelonderdeel gebruiken.
+Daarnaast heeft een Erosiebestrijdingsmaatregel ook een aanvoer- en afvoerzone waarvoor we de klasse Zone gebruiken.
+Voor de metingen omtrent Erosiebestrijdingsmaatregelen gebruiken we de klasse Observatie die gelinkt kan worden
+aan een FeatureOfInterest, welke een superklasse is van Erosiebestrijdingsmaatregel,
+een GeobserveerdKenmerk, bijvoorbeeld vochtigheid of densiteit, en
+een Sensor.
+Voor het onderhoud van Erosiebestrijdingsmaatregelen gebruiken we de klasse Onderhoud die een subklasse is van
+de klasse Actuatie en
+te linken is aan de klasse FeatureOfInterest.
+</p>
+
+<p>
 Je kan een aantal datavoorbeelden
 <a href="https://github.com/Informatievlaanderen/OSLOthema-modderstromen/tree/main/data-examples">hier</a> terugvinden.
 </p>
