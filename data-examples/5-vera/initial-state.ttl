@@ -1,0 +1,71 @@
+@prefix : <http://example.com/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ep: <https://test.data.vlaanderen.be/ns/erosiepoel/#> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+:GemeenteZaventem a prov:Agent;
+  dc:title "Gemeente Zaventem".
+
+:ErosiepoelZaventem1 a ep:Erosiepoel;
+  prov:atLocation :Jagerstraat;
+  ep:Erosiebestrijdingsmaatregel.verantwoordelijke :GemeenteZaventem;
+  cidoc:P52_has_current_owner :GemeenteZaventem;
+  ep:Erosiepoel.maxVolume [
+    a qudt:QuantityValue;
+    qudt:numericValue 19000000;
+    qudt:unit unit:L
+  ];
+
+
+ # Dimensies
+  qudt:hasQuantity [
+    a qudt:Quantity;
+    qudt:hasQuantityKind quantitykind:Length;
+    qudt:quantityValue [
+      a qudt:QuantityValue;
+      qudt:unit unit:M;
+      qudt:numericValue 62
+    ]
+  ],
+  [
+    a qudt:Quantity;
+    qudt:hasQuantityKind quantitykind:Width;
+    qudt:quantityValue [
+      a qudt:QuantityValue;
+      qudt:unit unit:M;
+      qudt:numericValue 54
+    ]
+  ],
+  [
+    a qudt:Quantity;
+    qudt:hasQuantityKind quantitykind:Thickness;
+    qudt:quantityValue [
+      a qudt:QuantityValue;
+      qudt:unit unit:M;
+      qudt:numericValue 0.56
+    ]
+  ].
+
+:Jagerstraat a prov:Location.
+:Sediment a sosa:ObservableProperty.
+
+# Observatie1 gaat uit van begintoestand en dus niet gemeten door sensor.
+
+:Observation1 a sosa:Observation;
+  sosa:observedProperty :Sediment;
+  sosa:hasResult :QuantityValue1;
+  sosa:hasFeatureOfInterest :ErosiepoelZaventem1;
+  prov:startedAtTime "2024-10-08 10:00";
+  prov:endedAtTime "2024-10-08 10:00".
+
+:QuantityValue1 a qudt:QuantityValue;
+  qudt:numericValue 0;
+  qudt:unit unit:L .

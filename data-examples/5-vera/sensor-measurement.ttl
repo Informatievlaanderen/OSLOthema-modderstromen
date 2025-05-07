@@ -1,0 +1,46 @@
+@prefix : <http://example.com/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix ep: <https://test.data.vlaanderen.be/ns/erosiepoel/#> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix generiek: <https://data.vlaanderen.be/ns/generiek#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix quantitykind: <http://qudt.org/vocab/quantitykind/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+:Ingangonderdeel a ep:Erosiebestrijdingsmaatregelonderdeel;
+  dc:type :Ingang.
+
+:SensorAanIngang a sosa:Sensor;
+  sosa:isHostedBy :Ingangonderdeel.
+
+:Observation1 a sosa:Observation;
+  sosa:observedProperty :Sediment;
+  sosa:hasResult :QuantityValue1;
+  sosa:hasFeatureOfInterest :ErosiepoelZaventem1;
+  prov:startedAtTime "2024-10-08 10:00";
+  prov:endedAtTime "2024-10-08 10:00";
+  sosa:madeBySensor :SensorAanIngang.
+
+
+# Stel dat sensor een afstand van wateroppervlak tot aan oever van 0.3m meet.
+# Dan staat er 0.26m water/sediment. Gezien de afmeting van 62x54m, staat er dan 870000 liter in.
+
+:QuantityValue1 a qudt:QuantityValue;
+  qudt:numericValue 870000;
+  qudt:unit unit:L .
+
+:ErosiepoelZaventem1 a ep:Erosiepoel;
+  dc:hasPart :Ingangonderdeel;
+  ep:Erosiepoel.maxVolume [
+    a qudt:QuantityValue;
+    qudt:numericValue 1900000;
+    qudt:unit unit:L
+  ].
+
+# Het leveranciersplatform geeft sensormeting weer in mTAW ==> hoogte waterstand ten opzichte van zeespiegel.
+# Er is dus steeds omzetwerk nodig, terwijl de sensor zelf gewoon een afstand geeft.
