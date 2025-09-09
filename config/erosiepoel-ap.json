@@ -5,7 +5,7 @@
     "eap": "OSLO-Erosiepoel.eap",
     "diagram": "Erosiepoel-v2",
     "template": "erosiepoel-ap.j2",
-    "title": "OSLO Erosiepoel",
+    "title": "Applicatieprofiel Erosiepoel",
     "publication-state": "https://data.vlaanderen.be/id/concept/StandaardStatus/ErkendeStandaard",
     "publication-date": "2025-07-23",
     "license": "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
