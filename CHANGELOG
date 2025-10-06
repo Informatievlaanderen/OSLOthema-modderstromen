@@ -1,2 +1,7 @@
 2025-03-17
-  - update EAP: verwijder sonderingen
+
+- update EAP: verwijder sonderingen
+
+2025-10-06
+
+- update config: rename `erosiepoel-ap` to `erosiepoel` for content negotiation
